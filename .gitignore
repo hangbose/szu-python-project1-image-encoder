@@ -1,0 +1,24 @@
+# Python 虚拟环境与缓存
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# 编辑器的本地设置
+.vscode/
+.idea/
+
+# 课程提供的模型参数和参考数组
+weights/image_encoder.npz
+assets/reference_outputs.npz
+
+# 程序生成的输出向量
+output_tokens.npz
+my_tokens.npz
+
+# LaTeX 编译中间文件
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
