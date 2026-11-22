@@ -8,13 +8,12 @@ __pycache__/
 .vscode/
 .idea/
 
-# 课程提供的模型参数和参考数组
-weights/image_encoder.npz
-assets/reference_outputs.npz
-
 # 程序生成的输出向量
 output_tokens.npz
 my_tokens.npz
+
+# 本地临时检查渲染文件
+work/
 
 # LaTeX 编译中间文件
 *.aux

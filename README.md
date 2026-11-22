@@ -17,16 +17,23 @@
 | requirements.txt | 课程提供的依赖范围 |
 | requirements-tested.txt | 本次验证环境中的依赖版本 |
 | check_results.txt | 完整检查输出（UTF-8） |
+| assets/, weights/ | 完整测试图片、参考数组、模型参数及其清单 |
+| lecture-demos/, practice/ | 课堂演示与练习材料 |
+| transformer_steps.py | 小尺寸 Transformer 算术演示 |
 
 ## 课程材料与复现
 
-本仓库不重复上传课程提供的图片、模型参数及参考数组。需要先从本课程发布项目附件的渠道获取 `project1-学生版.zip`；本仓库不提供公开下载链接，未持有附件者需向授课教师或助教获取。
+本仓库包含完整的学生项目目录：课程代码与说明、课堂演示、练习材料、十张测试图片、模型参数和参考数组。克隆仓库后不需要再覆盖课程包文件。
 
-推荐步骤：
+```powershell
+git lfs install
+git clone https://github.com/hangbose/szu-python-project1-image-encoder.git
+cd szu-python-project1-image-encoder
+```
 
-1. 解压课程包，进入包含 `README.md` 和 `image_encoder.py` 的 `project1-numpy-student` 目录。
-2. 将本仓库的核心文件复制到该目录，覆盖同名代码文件。保留课程包原有的 `weights/` 与 `assets/`。
-3. 确保至少保留以下材料：
+模型权重 `weights/image_encoder.npz` 通过 Git LFS 保存。克隆时需要安装并启用 Git LFS，才能取到真实权重文件。仓库中的参数清单和 SHA-256 指纹由 `check.py --stage assets` 核验。
+
+项目关键材料包括：
 
 ```text
 weights/image_encoder.npz
@@ -37,7 +44,7 @@ assets/manifest.json
 assets/reference_outputs.npz
 ```
 
-也可以把课程包中的完整 `weights/` 和 `assets/` 复制到仓库根目录。参数形状和配置必须匹配，不应单独修改配置来更换模型。
+参数形状和配置必须匹配，不应单独修改配置来更换模型。
 
 ## 环境与运行
 
